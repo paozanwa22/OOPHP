@@ -1,0 +1,174 @@
+CETING
+produk3.php = angka 3 di belakang nama menunjukkan perubahan pd video 
+
+#1 pendahuluan
+Object Oriented Programming?
+= pradigma pemrograman atau
+= gaya pemrograman atau 
+= cara menulis program
+
+prosedural programming? seperti seri PHP DASAR
+ = pemrograman secara prosedural
+
+#2 class dan Objec
+//jika di dalam file php tidak ada HTML, 
+maka penutup PHP boleh tidak di tulis.
+
+//cara install XDEBUG
+menampilkan hasil var_dump() lebih baik
+-install scrip di server komputer yang bernama XDEBUG
+
+#3 Property & Method
+di dalam class, kita bisa menambahkan 
+Property & Method
+
+//Definisi Property
+-Merepresentasikan data / keadaan dari sebuah object atau bisa kita sebut
+-Variabel yang ada di dalam object (member variable)
+- Property = variable didalam class
+//penulisan 
+-sama seperti variable di dalam PHP, ditambah dengan visibility di depannya
+
+// Method
+-Merepresentasikan perilaku dari sebuah object
+-Method = Function yang berada di dalam object
+ //penulisan 
+  -sama seperti variable di dalam PHP, ditambah dengan visibility di depannya
+ 
+#4 Constructor 
+Constructor = Sebuah method yang otomatis di jalankan ketika sebuah class kita buat objet-nya
+ 
+#5 Objec Type
+Tipe data pada PHP = Primitif(int,string,boolean,array).
+Objec adalah salah satu tipe data pada Class
+
+#6 Inheritance / pewarisan
+inheritance adalah konsep yang akan menciptakan hirarki antar class
+inheritance memungkinkan kita menghubungkan antar kelas dengan menggunakan hirarki yang nantinya ketika dua kelas atau lebih kita hubungkan menggunakan konsep inheritance pasti ada konsep yang bernama Parent class dan Child class
+
+Child class itu nantinya mewarisi semua properi dan method dari parent-nya (yang visible)
+Child class kita buat untuk memperluas atau mengembangkan (extends) fungsionalitas dari parent-nya.
+
+
+Menciptakan hierarki antar kelas(Parent & Child) //hirarki = penghubung antar kelas dengan konsep Parent class DAN Child class
+Child Class, mewarisi semua properti dan method dari parent-nya (yang visible) / yang bisa diwariskan
+Child Class, memperluas (extends) fungsionalitas dari parent-nya
+
+#7 Inheritance (PENERAPAN)
+next info > example > inheritance.JPG
+
+#8 Overreding 
+adalah sebuah istilah dimana kita bisa membuat method di Class Child yang memiliki nama yang sama dengan Class Parent-nya Overreding(mengambil alih) / menimpa nilai Parent-Nya
+
+$this //artinya intansi yang bersangkutan
+parent::getInfoProduk() //karna dia bukan variable, jadi kita tidak bisa menggunakan kurung kurawa dan harus menggunakan (konket) / penggabaung menggunakan titik 
+
+:: //adalah method statik (mengakses yang di atasnya)
+
+#9 OOP DASAR pada PHP #9 - Visibility (Access Modifier);
+-Konsep yang digunakan untuk mengatur akses terhadap property dan method pada sebuah object
+-Ada 3 keyword visibility : 
+  public, = dapat digunakan dimana saja, bahkan di luar kelas
+  protected = hanya dapat digunakan di dalam sebuah kelas berseta turunannya 
+  private = hanya dapat digunakan di dalam  sebuah kelas tertentu saja
+
+alasan menggunakan visibility
+-supaya hanya menampilkan aspek dari class yang dibutuhkan oleh 'client'
+-Menentukan kebutuhan yang jelas untuk object
+-memberikan kendali pada kode untuk menghindari 'bug'
+
+#10 OOP DASAR pada PHP #10 - Setter dan Getter (Accessor Method)
+Berkaitan dengan Visibility
+public, dapat digunakan dimana saja, bahkan di luar kelas
+protected, hanya dapat digunakan di dalam sebuah kelas beserta turunannya
+private, hanya dapat digunakan di dalam sebuah kelas tertentu saja
+
+Setter dan Getter = method untuk melihat, membaca dan mengubah isi dari property
+method untuk nge-set
+method untuk nge-get
+
+pada materi overloading
+__set() & __get() //termasuk kedalam magic method
+
+#11 - Static Keyword
+kita bisa mengakses property dan method pada Class tanpa di instansiasi dulu.
+
+kita bisa membuat static property dan static method
+supaya kita bisa akses pada kontek Class
+
+STATIC Keyword
+member yang terikat dengan class, bukan dengan object
+nilai static akan selalu tetap meskipun object di instansiasi berulang kali
+membuat kode menjadi 'procedural'
+biasanya digunakan untuk membuat fungsi bantuan / helper
+atau digunakan di class-class utility pada Framework
+
+#12 - Constant
+Constant adalah sebuah identifier untuk menyimpan nilai
+nilai-ya tidak dapat berubah
+
+define()
+const
+
+Perbedaan saat kita menggunakan OOP
+menggunakan define('','') kita tidak bisa menggunakan-nya di dalam Class
+harus di simpan di luar sebagai Constanta global
+const bisa kita masukkan kedalam kelas sehingga bisa kita gunakan di dalam konsep OOP 
+
+Magic Constant
+__LINE__
+__FILE__
+__DIR__
+__FUNCTION__
+__CLASS__
+__TRAIT__
+__METHOD__
+__NAMESPACE__
+
+#13 - Abstract Class (bagian 1)
+Abstract Class (1)
+sebuah kelas yang tidak dapat di instansiasi
+kelas Abstract
+mendefinisikan interface untuk kelas lain yang menjadi turunannya
+berperan sebagai kerangka dasar untuk kelas turunannya
+memiliki minimal 1 method Abstract
+digunakan dalam pewarisan / inheritance untuk memaksakan implementasi method abstrak yang sama untuk semua kelas turunannya
+
+Abstract Class (2)
+semua kelas turunan, harus mengimplementasikan method abstrak yang ada di kelas abstraknya
+kelas abstrak boleh memiliki property / method regular
+kelas abstrak boleh memiliki property / static method
+
+#14 - Abstract Class (bagian 2)
+sebuah kelas yang didalamnya memiliki minimal 1 method yang abstrak dan Definisi nya berada di class turunannya
+
+#15 - Interface
+kelas Abstract yang sama sekali tidak memiliki implementasi
+semua hanya Definisinya saja
+murni merupakan template untuk kelas turunannya
+tidak boleh memiliki property, hanya deklarasi method saja
+semua method harus dideklarasikan dengan visibility public
+boleh mendeklarasikan __construct()
+satu kelas boleh mengimplementasikan banyak interface
+
+#16 - Autoloading
+memanggil Class (file) tanpa harus menggunakan require
+karna konsep OOP biasanya 1 Class di tulis dalam 1 file
+
+#17 - Namespace
+sebuah cara untuk mengelompokkan program ke dalam sebuah package tersendiri atau biasa disebut teknik Encapsutation
+
+kenapa harus di kelompokkan
+karna PHP tidak mengijinkan kita untuk memiliki 2 Class dengan nama yang sama
+
+namespace Vendor\Namespace\SubNamespace;
+
+
+
+
+
+
+
+
+
+
